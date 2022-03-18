@@ -13,7 +13,9 @@ function plus() {
 
 function minus() {
     let num = document.getElementById('quantity').innerText;
-    num--;
+    if(num != 0){
+        num--;
+    }
     console.log(num);
     document.getElementById('quantity').innerText = num;
 }
@@ -35,6 +37,7 @@ function atc(id) {
     document.querySelector("#cartProductTotal").innerText = p * q;
     document.querySelector("#cart-popup").innerText = q;
     document.querySelector("#cart-popup").style.display = "block";
+    document.querySelector("#quantity").innerText = q;
 }
 
 $(document).ready(function () {
