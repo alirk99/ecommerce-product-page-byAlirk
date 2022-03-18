@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/responsive-and-interactive-ecommerce-product-page-_ZzsuQ3i-)
 - Live Site URL: (https://alirk99.github.io/ecommerce-product-page-byAlirk/)
 
 ## My process
@@ -110,9 +110,9 @@ Secondly, i am having difficulty in keeping cart popup in its place (right below
 
 ### Useful resources
 
-- (https://www.youtube.com/watch?v=6j5q-hP8sfk&t=1491s) - This video helped me to understand lightboxes.
-- (https://www.youtube.com/watch?v=GeykycZ4Ixs&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=103&t=1968s) - Took help from this aswell.
-- (w3schools.com) - This resource is really helpfull.
+- [Kevin Powell](https://www.youtube.com/watch?v=6j5q-hP8sfk&t=1491s) - This video helped me to understand lightboxes.
+- [CodeWithHarry](https://www.youtube.com/watch?v=GeykycZ4Ixs&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=103&t=1968s) - Took help from this aswell.
+- [w3schools](w3schools.com) - This resource is really helpfull.
 
 
 ## Author
