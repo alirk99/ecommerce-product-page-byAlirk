@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <title>E-commerce product page by Alirk</title>
+
+</head>
+
+<body>
+  <nav id="navBar">
+    <svg id="menuIcon" class="navItems" width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd" />
+    </svg>
+    <img src="images/logo.svg" alt="Sneakers logo" class="logo navItems">
+    <ul class="navItems list">
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <div id="cart-container">
+      <svg id="cartIcon" class="navItems" width="22" height="20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+          fill="#69707D" fill-rule="nonzero" />
+      </svg>
+      <span id="cart-popup">0</span>
+    </div>
+    <img src="images/image-avatar.png" alt="avatar" id="avatar" class="navItems">
+  </nav>
+
+  <div id="navLine"></div>
+
+  <main id="main">
+    <figure class="imageSection">
+      <img src="images/image-product-1.jpg" id="mob-mainImage">
+      <img src="images/image-product-1.jpg" id="mainImage">
+      
+      <img src="images/image-product-1-thumbnail.jpg" class="thumbnail thumbnailImage selected" id="thumbnail-1">
+      <img src="images/image-product-2-thumbnail.jpg" class="thumbnail thumbnailImage" id="thumbnail-2">
+      <img src="images/image-product-3-thumbnail.jpg" class="thumbnail thumbnailImage" id="thumbnail-3">
+      <img src="images/image-product-4-thumbnail.jpg" class="thumbnail thumbnailImage" id="thumbnail-4">
+      
+      <svg class="previous" id="previous-main" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+      </svg>
+
+      <svg class="next" id="next-main" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+        <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+      </svg>
+    </figure>
+
+    <article class="descriptionSection" id="product-1">
+      <h3 class="brand">Sneaker Company</h3>
+
+      <h1 class="productTitle">Fall Limited Edition Sneakers</h1>
+
+      <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+      <div class="price-container">
+        <div class="price">
+          <h2 class="price">$</h2>
+          <h2 class="price" id="price">125.00</h2>
+        </div>
+        <h3 class="discount">50%</h3>
+        <h3 class="cut-price">$250.00</h3>
+      </div>
+
+      <div class="buttonArea">
+
+        <div class="quantity">
+          <svg class="minus" id="minus-1" onclick="minus()" width="12" height="8" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path
+                d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                id="a" />
+            </defs>
+            <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+          </svg>
+
+          <h3 id="quantity">0</h3>
+
+          <svg class="plus" id="plus-1" onclick="plus()" width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path
+                d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                id="b" />
+            </defs>
+            <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+          </svg>
+        </div>
+
+        <button class="addToCart" onclick="atc('#product-1')">
+          <!-- <a> -->
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#fff" fill-rule="nonzero" />
+          </svg>
+          <!-- </a> -->
+          &nbsp;&nbsp;&nbsp;<h3>Add to cart</h3>
+        </button>
+      </div>
+    </article>
+  </main>
+
+  <!-- list menu for mobile -->
+  <div id="mob-menu-bg"></div>
+  <section id="mob-menu">
+
+    <svg id="menu-close" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+        fill="#69707D" fill-rule="evenodd" />
+    </svg>
+    <ul class="navItems mob-list">
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </section>
+
+  <!-- cart -->
+  <section id="cart" class="hidden">
+    <h3 id="cartTitle">Cart</h3>
+    <div id="cartLine"></div>
+
+    <h3 id="cartEmpty">Your cart is empty.</h3>
+
+    <div class="cartItem hidden">
+      <img src="images/image-product-1-thumbnail.jpg">
+
+      <div class="productDetails">
+        <p id="cartProductTitle">Title</p>
+        <span>$<span id="cartProductPrice">Price</span></span> x <span id="cartProductQuantity">quantity</span>
+        <span>=</span> <span class="darkBlue">$<span id="cartProductTotal">Total</span></span>
+      </div>
+
+      <svg class="deleteProduct" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M14.5 3H9.5L8.5 4H5V6H19V4H15.5L14.5 3ZM16 9V19H8V9H16ZM6 7H18V19C18 20.1 17.1 21 16 21H8C6.9 21 6 20.1 6 19V7Z"
+          fill="#black" />
+        <path d="M10 10H14V12H10V10Z" fill="#black" />
+        <path d="M10 13H14V15H10V13Z" fill="#black" />
+        <path d="M10 16H14V18H10V16Z" fill="#black" />
+      </svg>
+
+    </div>
+
+    <button id="checkout" class="hidden">
+      <h3>Checkout</h3>
+    </button>
+  </section>
+
+  <!-- images light box -->
+  <section id="lightBox" class="hidden">
+    <figure id="lightBoxContent">
+
+      <div id="largeView">
+        <img id="largeImage" src="images/image-product-1.jpg">
+
+        <svg id="lightBox-close" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+            fill="#69707D" fill-rule="evenodd" />
+        </svg>
+
+        <svg class="previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+        </svg>
+
+        <svg class="next" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+        </svg>
+      </div>
+
+      <div id="lightBoxThumbnail">
+        <img src="images/image-product-1-thumbnail.jpg" class="thumbnail box-thumbnail selected" id="box-thumbnail-1">
+        <img src="images/image-product-2-thumbnail.jpg" class="thumbnail box-thumbnail" id="box-thumbnail-2">
+        <img src="images/image-product-3-thumbnail.jpg" class="thumbnail box-thumbnail" id="box-thumbnail-3">
+        <img src="images/image-product-4-thumbnail.jpg" class="thumbnail box-thumbnail" id="box-thumbnail-4">
+      </div>
+    </figure>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ali Raza Khalid</a>.
+  </div>
+
+  <script src="/javascript/code.js"></script>
+
+</body>
+
+</html>
